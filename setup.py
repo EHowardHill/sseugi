@@ -1,15 +1,23 @@
 from distutils.core import setup
+import pathlib
+
+# The directory containing this file
+HERE = pathlib.Path(__file__).parent
+
+# The text of the README file
+README = (HERE / "README.md").read_text()
+
 setup(
   name = 'Sseugi',         # How you named your package folder (MyLib)
   packages = ['Sseugi'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make
+  version = '0.11',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Romanized Hangul to Hangul converter',   # Give a short description about your library
-  long_description="README.txt",
+  long_description=README,
   long_description_content_type="text/markdown",
   author = 'Ethan Hill',                   # Type in your name
   author_email = 'ethan.hill1999@outlook.com',      # Type in your E-Mail
-  url = 'https://github.com/EHowardHill',   # Provide either the link to your github or to your website
+  url = 'https://github.com/EHowardHill/sseugi',   # Provide either the link to your github or to your website
   download_url = 'https://github.com/EHowardHill/sseugi/archive/0.1.tar.gz',    # I explain this later on
   keywords = ['HANGUL', 'KOREAN', 'ROMANIZATION'],   # Keywords that define your package best
   install_requires=[],
